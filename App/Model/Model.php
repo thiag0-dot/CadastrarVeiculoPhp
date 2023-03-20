@@ -1,6 +1,6 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\Model;
+namespace APP\Model;
 
 abstract class Model
 {

@@ -1,13 +1,14 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\DAO;
+namespace APP\DAO;
 
-use CADASTRO_VEICULO\App\DAO\DAO;
-use CADASTRO_VEICULO\App\Model\TipoModel;
+use APP\DAO\DAO;
+use APP\Model\TipoModel;
 use \PDO;
 
 class TipoDAO extends DAO
 {
+
     public function __construct()
     {
         parent::__construct();
@@ -15,7 +16,7 @@ class TipoDAO extends DAO
 
     public function select()
     {
-        $sql = "SELECT * FROM Tipo";
+        $sql = "SELECT * FROM tipo";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

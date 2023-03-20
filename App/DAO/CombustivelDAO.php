@@ -1,9 +1,9 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\DAO;
+namespace APP\DAO;
 
-use CADASTRO_VEICULO\App\DAO\DAO;
-use CADASTRO_VEICULO\App\Model\CombustivelModel;
+use APP\DAO\DAO;
+use APP\Model\CombustivelModel;
 use \PDO;
 
 class CombustivelDAO extends DAO
@@ -15,7 +15,7 @@ class CombustivelDAO extends DAO
 
     public function select()
     {
-        $sql = "SELECT * FROM Combustivel";
+        $sql = "SELECT * FROM combustivel";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

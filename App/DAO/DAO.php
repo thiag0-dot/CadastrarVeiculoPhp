@@ -1,17 +1,15 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\DAO;
+namespace APP\DAO;
 
 use \PDO;
 
 class DAO extends PDO
 {
-    public $dsn = "mysql:host=localhost:3306;dbname=cadastroveiculo";
-    public $user = "root";
-    public $pass = "thiagodev";
-
+    protected $conexao;
     public function __construct()
     {
-        return parent::__construct($this->dsn, $this->user, $this->pass);
+        $dsn = "mysql:host=" . $_ENV['db']['host'] . ";dbname=" .  $_ENV['db']['database'];
+        $this->$conexao = new PDO($dsn, $_ENV['db']['user'], $_ENV['db']['pass']) ;
     }
 }

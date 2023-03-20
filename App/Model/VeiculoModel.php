@@ -1,8 +1,8 @@
 <?php 
 
-namespace CADASTRO_VEICULO\App\Model;
+namespace APP\Model;
 
-use CADASTRO_VEICULO\App\DAO\
+use APP\DAO\
 {
     VeiculoDAO,
     MarcaDAO,
@@ -18,10 +18,14 @@ class VeiculoModel extends Model
     $RouboFurto, $Aluguel, $Venda, $Particular;
 
     public $lista_marca = array();
+    public $lista_modelo = array();
+    public $lista_Fabricante = array();
+    public $lista_tipo = array();
+    public $lista_combustivel = array();
 
     public function save()
     {
-        include 'App/DAO/VeiculoDAO.php';
+        include 'APP/DAO/VeiculoDAO.php';
         $dao = new VeiculoDAO();
 
         $this->id;
@@ -31,7 +35,7 @@ class VeiculoModel extends Model
 
     public function getAllRows()
     {
-        include 'App/DAO/VeiculoDAO.php';
+        include 'APP/DAO/VeiculoDAO.php';
 
         $dao = new VeiculoDAO();
 
@@ -40,7 +44,7 @@ class VeiculoModel extends Model
 
     public function getById(int $id)
     {
-        include 'App/DAO/VeiculoDAO.php';
+        include 'APP/DAO/VeiculoDAO.php';
 
         $dao = new VeiculoDAO();
 
@@ -50,7 +54,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllMarca(){
-        include 'App/DAO/MarcaDAO.php';
+        include 'APP/DAO/MarcaDAO.php';
 
         $dao = new MarcaDAO();
 
@@ -58,7 +62,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllModelo(){
-        include 'App/DAO/ModeloDAO.php';
+        include 'APP/DAO/ModeloDAO.php';
 
         $dao = new ModeloDAO();
 
@@ -66,7 +70,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllFabricante(){
-        include 'App/DAO/FabricanteDAO.php';
+        include 'APP/DAO/FabricanteDAO.php';
 
         $dao = new FabricanteDAO();
 
@@ -74,7 +78,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllCombustivel(){
-        include 'App/DAO/CombustivelDAO.php';
+        include 'APP/DAO/CombustivelDAO.php';
 
         $dao = new CombustivelDAO();
 
@@ -82,7 +86,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllTipo(){
-        include 'App/DAO/TipoDAO.php';
+        include 'APP/DAO/TipoDAO.php';
 
         $dao = new TipoDAO();
 

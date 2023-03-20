@@ -1,8 +1,8 @@
 <?php 
 
-namespace CADASTRO_VEICULO\App\Controller;
+namespace APP\Controller;
 
-use CADASTRO_VEICULO\App\Model\
+use APP\Model\
 {
     VeiculoModel,
     MarcaModel,
@@ -20,7 +20,7 @@ class VeiculoController extends Controller
         $model = new VeiculoModel();
         $model->getAllRows();
 
-        include 'App/View/modules/VeiculoListar.php';
+        include 'APP/View/modules/VeiculoListar.php';
     }
 
     public static function form()
@@ -52,13 +52,13 @@ class VeiculoController extends Controller
         $model_tipo->getAllRows();
         $model->lista_tipo = $model_tipo->rows;
 
-        include 'App/View/modules/VeiculoCadastro.php';
+        include 'APP/View/modules/VeiculoCadastro.php';
     }
 
     public static function save()
     {
         $Veiculo = new VeiculoModel();
-        $Veiculo->idVeiculo = $_POST['idVeiculo'];
+        $Veiculo->id= $_POST['idVeiculo'];
         $Veiculo->Marca = $_POST['Marca'];
         $Veiculo->Modelo = $_POST['Modelo'];
         $Veiculo->Fabricante = $_POST['Fabricante'];

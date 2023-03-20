@@ -1,7 +1,7 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\Model;
-use CADASTRO_VEICULO\App\DAO\CombustivelDAO;
+namespace APP\Model;
+use APP\DAO\CombustivelDAO;
 
 class CombustivelModel extends Model
 {
@@ -9,7 +9,7 @@ class CombustivelModel extends Model
 
     public function getAllRows()
     {
-        include 'App/DAO/CombustivelDAO.php';
+        include 'APP/DAO/CombustivelDAO.php';
 
         $dao = new CombustivelDAO();
 

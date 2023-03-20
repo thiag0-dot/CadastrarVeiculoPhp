@@ -1,7 +1,7 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\Model;
-use CADASTRO_VEICULO\App\DAO\TipoDAO;
+namespace APP\Model;
+use APP\DAO\TipoDAO;
 
 class TipoModel extends Model
 {
@@ -9,7 +9,7 @@ class TipoModel extends Model
 
     public function getAllRows()
     {
-        include 'App/DAO/TipoDAO.php';
+        include 'APP/DAO/TipoDAO.php';
 
         $dao = new TipoDAO();
 

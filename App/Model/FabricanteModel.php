@@ -1,7 +1,7 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\Model;
-use CADASTRO_VEICULO\App\DAO\FabricanteDAO;
+namespace APP\Model;
+use APP\DAO\FabricanteDAO;
 
 class FabricanteModel extends Model
 {
@@ -9,7 +9,7 @@ class FabricanteModel extends Model
 
     public function getAllRows()
     {
-        include 'App/DAO/FabricanteDAO.php';
+        include 'APP/DAO/FabricanteDAO.php';
 
         $dao = new FabricanteDAO();
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\DAO;
+namespace APP\DAO;
 
-use CADASTRO_VEICULO\App\DAO\DAO;
-use CADASTRO_VEICULO\App\Model\FabricanteModel;
+use APP\DAO\DAO;
+use APP\Model\FabricanteModel;
 use \PDO;
 
 class FabricanteDAO extends DAO
@@ -15,7 +15,7 @@ class FabricanteDAO extends DAO
 
     public function select()
     {
-        $sql = "SELECT * FROM Fabricante";
+        $sql = "SELECT * FROM fabricante";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

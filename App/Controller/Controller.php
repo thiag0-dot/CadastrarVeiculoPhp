@@ -1,5 +1,5 @@
 <?php
-    namespace CADASTRO_VEICULO\App\Controller;
+    namespace APP\Controller;
 
     abstract class Controller
     {

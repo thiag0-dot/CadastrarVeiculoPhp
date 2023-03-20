@@ -1,9 +1,9 @@
 <?php
 
-namespace CADASTRO_VEICULO\App\DAO;
+namespace APP\DAO;
 
-use CADASTRO_VEICULO\App\DAO\DAO;
-use CADASTRO_VEICULO\App\Model\VeiculoModel;
+use APP\DAO\DAO;
+use APP\Model\VeiculoModel;
 use \PDO;
 
 class VeiculoDAO extends DAO
@@ -53,14 +53,14 @@ class VeiculoDAO extends DAO
                 JOIN Combustivel c on (c.id = v.Combustivel);";
         
         $stmt = $this->conexao->prepare($sql);
-        $tmt->execute();
+        $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
 
     public function selectById(int $id)
     {
-        include_once 'App/Model/VeiculoModel.php';
+        include_once 'APP/Model/VeiculoModel.php';
 
         $sql = "SELECT * FROM veiculo WHERE id = ?";
 
