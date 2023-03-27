@@ -8,9 +8,13 @@ use \PDO;
 
 class FabricanteDAO extends DAO
 {
+    private $conexao;  
     public function __construct()
     {
-        parent::__construct();
+        include_once 'DAO.php';
+
+        $this->conexao = new DAO();
+        
     }
 
     public function select()

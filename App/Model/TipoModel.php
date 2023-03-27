@@ -9,7 +9,7 @@ class TipoModel extends Model
 
     public function getAllRows()
     {
-        include 'APP/DAO/TipoDAO.php';
+        include 'DAO/TipoDAO.php';
 
         $dao = new TipoDAO();
 

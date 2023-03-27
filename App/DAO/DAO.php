@@ -6,10 +6,12 @@ use \PDO;
 
 class DAO extends PDO
 {
-    protected $conexao;
+    public $dsn = "mysql:host=localhost:3307;dbname=cadastroveiculo";
+    public $user = "root";
+    public $pass = "etecjau";
+
     public function __construct()
     {
-        $dsn = "mysql:host=" . $_ENV['db']['host'] . ";dbname=" .  $_ENV['db']['database'];
-        $this->$conexao = new PDO($dsn, $_ENV['db']['user'], $_ENV['db']['pass']) ;
+        return parent::__construct($this->dsn, $this->user, $this->pass);
     }
 }

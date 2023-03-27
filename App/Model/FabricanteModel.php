@@ -9,7 +9,7 @@ class FabricanteModel extends Model
 
     public function getAllRows()
     {
-        include 'APP/DAO/FabricanteDAO.php';
+        include 'DAO/FabricanteDAO.php';
 
         $dao = new FabricanteDAO();
 

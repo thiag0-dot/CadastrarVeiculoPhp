@@ -9,7 +9,7 @@ class ModeloModel extends Model
 
     public function getAllRows()
     {
-        include 'APP/DAO/Modelo.php';
+        include 'DAO/ModeloDAO.php';
 
         $dao = new ModeloDAO();
 

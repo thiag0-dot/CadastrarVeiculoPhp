@@ -25,7 +25,7 @@ class VeiculoModel extends Model
 
     public function save()
     {
-        include 'APP/DAO/VeiculoDAO.php';
+        include 'DAO/VeiculoDAO.php';
         $dao = new VeiculoDAO();
 
         $this->id;
@@ -35,7 +35,7 @@ class VeiculoModel extends Model
 
     public function getAllRows()
     {
-        include 'APP/DAO/VeiculoDAO.php';
+        include 'DAO/VeiculoDAO.php';
 
         $dao = new VeiculoDAO();
 
@@ -44,7 +44,7 @@ class VeiculoModel extends Model
 
     public function getById(int $id)
     {
-        include 'APP/DAO/VeiculoDAO.php';
+        include 'DAO/VeiculoDAO.php';
 
         $dao = new VeiculoDAO();
 
@@ -54,7 +54,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllMarca(){
-        include 'APP/DAO/MarcaDAO.php';
+        include 'DAO/MarcaDAO.php';
 
         $dao = new MarcaDAO();
 
@@ -62,7 +62,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllModelo(){
-        include 'APP/DAO/ModeloDAO.php';
+        include 'DAO/ModeloDAO.php';
 
         $dao = new ModeloDAO();
 
@@ -70,7 +70,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllFabricante(){
-        include 'APP/DAO/FabricanteDAO.php';
+        include 'DAO/FabricanteDAO.php';
 
         $dao = new FabricanteDAO();
 
@@ -78,7 +78,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllCombustivel(){
-        include 'APP/DAO/CombustivelDAO.php';
+        include 'DAO/CombustivelDAO.php';
 
         $dao = new CombustivelDAO();
 
@@ -86,7 +86,7 @@ class VeiculoModel extends Model
     }
 
     public function getAllTipo(){
-        include 'APP/DAO/TipoDAO.php';
+        include 'DAO/TipoDAO.php';
 
         $dao = new TipoDAO();
 

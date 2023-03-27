@@ -20,7 +20,7 @@ class VeiculoController extends Controller
         $model = new VeiculoModel();
         $model->getAllRows();
 
-        include 'APP/View/modules/VeiculoListar.php';
+        include 'View/modules/VeiculoListar.php';
     }
 
     public static function form()
@@ -52,7 +52,7 @@ class VeiculoController extends Controller
         $model_tipo->getAllRows();
         $model->lista_tipo = $model_tipo->rows;
 
-        include 'APP/View/modules/VeiculoCadastro.php';
+        include 'View/modules/VeiculoCadastro.php';
     }
 
     public static function save()

@@ -9,7 +9,7 @@ class MarcaModel extends Model
 
     public function getAllRows()
     {
-        include '../App/DAO/MarcaDAO.php';
+        include 'DAO/MarcaDAO.php';
 
         $dao = new MarcaDAO();
         $this->rows = $dao->select();

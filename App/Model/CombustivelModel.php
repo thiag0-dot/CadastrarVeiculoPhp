@@ -9,7 +9,7 @@ class CombustivelModel extends Model
 
     public function getAllRows()
     {
-        include 'APP/DAO/CombustivelDAO.php';
+        include 'DAO/CombustivelDAO.php';
 
         $dao = new CombustivelDAO();
 
