@@ -14,14 +14,14 @@
         <label>Marca</label>
         <select name="Marca" id="Marca">
             <?php foreach($model->lista_marca as $Marca):?>
-                <option value="<?= $Marca->id?>"><?= $Marca->Nome?></option>
+                <option value="<?= $Marca->idMarca?>"><?= $Marca->Nome?></option>
             <?php endforeach?>
         </select>
 
         <label>Modelo</label>
         <select name="Modelo" id="Modelo">
             <?php foreach($model->lista_modelo as $Modelo):?>
-                <option value="<?= $Modelo->id?>"><?= $Modelo->Nome?></option>
+                <option value="<?= $Modelo->idModelo?>"><?= $Modelo->Nome?></option>
             <?php endforeach?>
         </select>
         <br>
@@ -29,14 +29,14 @@
         <label>Tipo</label>
         <select name="Tipo" id="Tipo">
             <?php foreach($model->lista_tipo as $Tipo):?>
-                <option value="<?= $Tipo->id?>"><?= $Tipo->Nome?></option>
+                <option value="<?= $Tipo->idTipo?>"><?= $Tipo->Nome?></option>
             <?php endforeach?>
         </select>
 
         <label>Fabricante</label>
         <select name="Fabricante" id="Fabricante">
             <?php foreach($model->lista_fabricante as $Fabricante):?>
-                <option value="<?= $Fabricante->id?>"><?= $Fabricante->Nome?></option>
+                <option value="<?= $Fabricante->idFabricante?>"><?= $Fabricante->Nome?></option>
             <?php endforeach?>
         </select>
         <br>
@@ -44,11 +44,11 @@
         <label>Combustivel</label>
         <select name="Combustivel" id="Combustivel">
             <?php foreach($model->lista_combustivel as $Combustivel):?>
-                <option value="<?= $Combustivel->id?>"><?= $Combustivel->Nome?></option>
+                <option value="<?= $Combustivel->idCombustivel?>"><?= $Combustivel->Nome?></option>
             <?php endforeach?>
         </select> 
         <label for=" Ano" class="form-label">Ano:</label>
-        <input type="text" class="form-control" id="Ano" name="Ano">
+        <input type="Number" class="form-control" id="Ano" name="Ano">
         <br>
         <br>
         <label for="Cor" class="form-label">Cor:</label>

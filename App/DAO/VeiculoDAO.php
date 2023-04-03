@@ -18,7 +18,7 @@ class VeiculoDAO extends DAO
 
     public function insert(VeiculoModel $model)
     {
-        $sql = "INSERT INTO cadastroveiculo
+        $sql = "INSERT INTO veiculo
                 (Marca, Modelo, Fabricante, Tipo, Ano, Combustivel, Cor, Chassi, Km, Revisao, Sinistro,
                 RouboFurto, Aluguel, Venda, Particular)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
@@ -44,13 +44,13 @@ class VeiculoDAO extends DAO
 
     public function select()
     {
-        $sql = "SELECT v.id, m.Marca, mo.Modelo, f.Fabricante, c.Combustivel, t.Tipo 
+        $sql = "SELECT v.idVeiculo, m.idMarca, mo.idModelo, f.idFabricante, c.idCombustivel, t.idTipo 
                 FROM Veiculo v 
-                JOIN Marca m on (m.id = v.Marca) 
-                JOIN Modelo mo on (mo.id = v.Modelo) 
-                JOIN Fabricante f on (f.id = v.Fabricante) 
-                JOIN Tipo t on (t.id = v.Tipo) 
-                JOIN Combustivel c on (c.id = v.Combustivel);";
+                JOIN Marca m on (m.idMarca = v.Marca) 
+                JOIN Modelo mo on (mo.idModelo = v.Modelo) 
+                JOIN Fabricante f on (f.idFabricante = v.Fabricante) 
+                JOIN Tipo t on (t.idTipo = v.Tipo) 
+                JOIN Combustivel c on (c.idCombustivel = v.Combustivel);";
         
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

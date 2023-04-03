@@ -23,7 +23,11 @@ class MarcaDAO extends DAO
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        $res = $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        
+
+        return $res;
     }
 
 }

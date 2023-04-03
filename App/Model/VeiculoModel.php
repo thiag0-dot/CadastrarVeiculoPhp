@@ -28,8 +28,7 @@ class VeiculoModel extends Model
         include 'DAO/VeiculoDAO.php';
         $dao = new VeiculoDAO();
 
-        $this->id;
-        $dao->insert($this->id);
+        $dao->insert($this);
     
     }
 
