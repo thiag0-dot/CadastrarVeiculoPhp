@@ -48,11 +48,11 @@
             <?php endforeach?>
         </select> 
         <label for=" Ano" class="form-label">Ano:</label>
-        <input type="Number" class="form-control" id="Ano" name="Ano">
+        <input  autocomplete="off" spellcheck="false" min="1886" max="2023" type="Number" class="form-control" id="Ano" name="Ano">
         <br>
         <br>
         <label for="Cor" class="form-label">Cor:</label>
-        <input type="text" id="Cor" name="Cor">
+        <input style="text-transform:uppercase" type="text" id="Cor" name="Cor">
 
         <label for="Chassi" class="form-label">Chassi:</label>
         <input type="text" id="Chassi" name="Chassi">

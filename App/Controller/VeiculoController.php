@@ -68,12 +68,14 @@ class VeiculoController extends Controller
         $Veiculo->Cor = $_POST['Cor'];
         $Veiculo->Chassi = $_POST['Chassi'];
         $Veiculo->Km = $_POST['Km'];
-        $Veiculo->Revisao = isset($_POST['Revisao']);
-        $Veiculo->Sinistro = isset($_POST['Sinistro']);
-        $Veiculo->RouboFurto = isset($_POST['RouboFurto']);
-        $Veiculo->Aluguel = isset($_POST['Aluguel']);
-        $Veiculo->Venda = isset($_POST['Venda']);
-        $Veiculo->Particular = isset($_POST['Particular']);
+        $Veiculo->Revisao = isset($_POST['Revisao']) ? 1 : 0;
+        $Veiculo->Sinistro = isset($_POST['Sinistro']) ? 1 : 0;
+        $Veiculo->RouboFurto = isset($_POST['RouboFurto']) ? 1 : 0;
+        $Veiculo->Aluguel = isset($_POST['Aluguel']) ? 1 : 0;
+        $Veiculo->Venda = isset($_POST['Venda']) ? 1 : 0;
+        $Veiculo->Particular = isset($_POST['Particular']) ? 1 : 0;
+
+        var_dump($_POST);
 
         $Veiculo->save();
         header("Location: /Veiculo");
