@@ -1,0 +1,11 @@
+#form form {
+    width:fit-content;
+    
+    border-radius: 5px;
+    background-color:  rgba(167, 208, 224, .3);
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    top: 25px;
+    
+}
