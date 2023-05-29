@@ -1,5 +1,6 @@
 <?php
 
+use APP\Controller\BackupController;
 use APP\Controller\CombustivelController;
 use APP\Controller\FabricanteController;
 use APP\Controller\MarcaController;
@@ -12,6 +13,9 @@ $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($uri_parse)
 {
+    case '/':
+        include(BASEDIR . "/View/modules/Home.php");
+    break;
     case '/Veiculo':
         VeiculoController::index();
     break;
@@ -83,6 +87,14 @@ switch($uri_parse)
     case '/Tipo/save':
         TipoController::save();
     break; 
+
+    case "/backup/exportar":
+        BackupController::Export_Backup();
+    break;
+
+    case "/backup/importar":
+        BackupController::Import_Backup();
+    break;
 
     default:
         echo "erro 404";
