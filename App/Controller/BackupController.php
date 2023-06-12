@@ -10,12 +10,36 @@ class BackupController
         $reparticao = "C:";
 
         exec("$reparticao");
-
+        
         if(!is_dir("$reparticao/Backup"))
         {
+            
             exec("md Backup");
+
         }
 
+        if(file_exists("C:/Backup/Backup_Full.sql"))
+        {
+
+            exec("del C:/Backup/Backup_Full.sql");
+
+        }
+
+        if(file_exists("C:/Backup/Backup_Structure.sql"))
+        {
+
+            exec("del C:/Backup/Backup_Structure.sql");
+
+        }
+
+        if(file_exists("C:/Backup/Backup_Data.sql"))
+        {
+
+            exec("del C:/Backup/Backup_Data.sql");
+
+        }
+
+        
         if(file_exists("$reparticao/Backup/Export/Exportar.bat"))
         {
 

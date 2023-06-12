@@ -11,10 +11,11 @@ use APP\Model\MarcaModel;
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+
 switch($uri_parse)
 {
     case '/':
-        include(BASEDIR . "/View/modules/Home.php");
+        include(BASEDIR . "/APP/View/modules/Home.php");
     break;
     case '/Veiculo':
         VeiculoController::index();
